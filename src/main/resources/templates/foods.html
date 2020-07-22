@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DingTalk 智能点餐</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/diancan/static/css/common.css">
+    <link rel="stylesheet" href="/diancan/static/css/foods.css">
+</head>
+<body>
+<div class="box">
+    <div class="wrap">
+        <p class="time"></p>
+        <div class="header">
+            <img class="back" src="/diancan/static/img/back.png" alt="">
+            <p class="head-text">配置菜单</p>
+        </div>
+        <div class="wrap-scroll">
+            <div class="content">
+                <p class="tip">温馨提示：☑️ 系统才会匹配到，如果你讨厌或者厨师做不出某道菜，那么你就取消勾选，下次点菜就不会出现辣～～</p>
+                <p class="title">大菜</p>
+                <div class="list">
+                    <div class="item" th:each="item:${maxFoods}">
+                        <input class="checkbox" type="checkbox" th:value="${item.fid}" th:checked="${item.show}"/>
+                        <p th:text="${item.name}"></p>
+                        <p class="price" th:text="${item.price + '元'}"></p>
+                    </div>
+                </div>
+                <p class="title">荤菜</p>
+                <div class="list">
+                    <div class="item" th:each="item:${meatFoods}">
+                        <input class="checkbox" type="checkbox" th:value="${item.fid}" th:checked="${item.show}"/>
+                        <p th:text="${item.name}"></p>
+                        <p class="price" th:text="${item.price + '元'}"></p>
+                    </div>
+                </div>
+                <p class="title">素菜</p>
+                <div class="list">
+                    <div class="item" th:each="item:${cheapFoods}">
+                        <input class="checkbox" type="checkbox" th:value="${item.fid}" th:checked="${item.show}"/>
+                        <p th:text="${item.name}"></p>
+                        <p class="price" th:text="${item.price + '元'}"></p>
+                    </div>
+                </div>
+                <p class="title">汤类</p>
+                <div class="list">
+                    <div class="item" th:each="item:${soupFoods}">
+                        <input class="checkbox" type="checkbox" th:value="${item.fid}" th:checked="${item.show}"/>
+                        <p th:text="${item.name}"></p>
+                        <p class="price" th:text="${item.price + '元'}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/diancan/static/js/foods.js"></script>
+</body>
+</html>

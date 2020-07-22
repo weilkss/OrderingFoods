@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.diancan.mapper.FoodsMapper">
+
+    <select id="findFoods" resultType="Foods">SELECT * FROM foods</select>
+
+    <update id="updateFoods" parameterType="Foods">
+        UPDATE foods SET `show`=#{show} WHERE fid=#{fid}
+    </update>
+
+    <select id="findFoodsByType" resultType="Foods">SELECT * FROM foods WHERE type=#{type}</select>
+</mapper>

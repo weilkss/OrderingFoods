@@ -1,0 +1,32 @@
+.tip{
+    font-size: 12px;
+    color: #999;
+    margin: 10px 0;
+}
+.list{
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title{
+    font-size: 18px;
+    margin: 30px 0 10px 0;
+    background-image: linear-gradient(to right,#999,#eee);
+    padding: 0 10px;
+    color: #fff;
+    font-weight: bold;
+}
+.item{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.checkbox{
+    margin :0 5px 0 0;
+}
+.price{
+    font-size: 12px;
+    color: #999;
+    margin-left: 5px;
+}

@@ -1,0 +1,117 @@
+.toast {
+    padding: 10px 30px;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 2px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    color: #fff;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.app-title {
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.app-time {
+    font-size: 20px;
+    color: #999;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+.label {
+    width: 150px;
+    color: #999;
+    text-align: justify;
+    flex-shrink: 0;
+}
+
+.commit {
+    background-color: #999999;
+    outline: none;
+    border: none;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    display: block;
+    margin: 30px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.number-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+.num-add, .num-reduce {
+    width: 30px;
+    height: 20px;
+    border: none;
+    outline: none;
+    text-align: center;
+    line-height: 20px;
+    background-color: #eee;
+}
+
+.num-input {
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.radio-box {
+    color: #999;
+}
+
+.link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.github {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+}
+
+@media screen and (max-width: 420px) {
+    .label {
+        width: 200px;
+    }
+
+    .num-input,
+    .num-add, .num-reduce {
+        width: 40px;
+        height: 30px;
+    }
+}

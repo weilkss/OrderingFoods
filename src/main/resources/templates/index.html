@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DingTalk 智能点餐</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/diancan/static/css/common.css">
+    <link rel="stylesheet" href="/diancan/static/css/index.css">
+</head>
+<body>
+<div class="box">
+    <div class="wrap">
+        <p class="time"></p>
+        <div class="header">
+            <p class="head-text">首页</p>
+        </div>
+        <div class="wrap-scroll">
+            <div class="content">
+                <p class="app-title">DingTalk 智能点餐</p>
+                <p class="app-time">[[${curTime}]]</p>
+                <div class="item margin-top">
+                    <p class="label">就餐人数：</p>
+                    <div class="number-box">
+                        <button class="num-add">+</button>
+                        <input class="num-input peopleNum" th:value="${params.peopleNum}" min="1" type="text"
+                               disabled="true">
+                        <button class="num-reduce">-</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="label">荤菜数：</p>
+                    <div class="number-box">
+                        <button class="num-add">+</button>
+                        <input class="num-input meatNum" th:value="${params.meatNum}" min="1" type="text"
+                               disabled="true">
+                        <button class="num-reduce">-</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="label">素菜数：</p>
+                    <div class="number-box">
+                        <button class="num-add">+</button>
+                        <input class="num-input cheapNum" th:value="${params.cheapNum}" min="1" type="text"
+                               disabled="true">
+                        <button class="num-reduce">-</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="label">汤类：</p>
+                    <div class="number-box">
+                        <button class="num-add">+</button>
+                        <input class="num-input soupNum" th:value="${params.soupNum}" min="1" type="text"
+                               disabled="true">
+                        <button class="num-reduce">-</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="label">是否需要大菜：</p>
+                    <div class="radio-box">
+                        <input type="radio" value="1" name="num"/>
+                        <span>是</span>
+                        <input type="radio" value="0" name="num" checked="checked"/>
+                        <span>否</span>
+                    </div>
+                </div>
+                <button class="commit">确认选餐</button>
+                <a class="link" href="/diancan/foods">自定义菜单</a>
+                <p class="github">
+                    <a href="https://github.com/weilkss/OrderingFood">
+                        <img class="github-icon" src="/diancan/static/img/GitHub.png" alt="">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/diancan/static/js/index.js"></script>
+</body>
+</html>
