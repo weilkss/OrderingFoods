@@ -8,5 +8,5 @@
         UPDATE foods SET `show`=#{show} WHERE fid=#{fid}
     </update>
 
-    <select id="findFoodsByType" resultType="Foods">SELECT * FROM foods WHERE type=#{type}</select>
+    <select id="findFoodsByType" resultType="Foods">SELECT * FROM foods WHERE `type`=#{type} AND `show`=1</select>
 </mapper>

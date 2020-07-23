@@ -82,7 +82,7 @@ public class CommonUtil {
         foodsKey[0] = "蛋";
         foodsKey[1] = "肉片";
         foodsKey[2] = "肉丝";
-        foodsKey[3] = "里脊";
+        foodsKey[3] = "粉";
         foodsKey[4] = "拌";
         foodsKey[5] = "回锅";
         foodsKey[6] = "鸡";
@@ -99,7 +99,7 @@ public class CommonUtil {
         foodsKey[17] = "豆腐";
         foodsKey[18] = "玉米";
         foodsKey[19] = "虎皮";
-        foodsKey[19] = "粉";
+        foodsKey[20] = "里脊";
 
         return foodsKey;
     }
