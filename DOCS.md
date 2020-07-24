@@ -415,4 +415,34 @@ for (int j = 0; j < selectFoodsKey.length; j++) {
 }
 ```
 
+### Scheduled 任务调度
+
+入口 `DiancanApplication` 要注入
+
+```java
+@EnableScheduling
+```
+
+每天中午 11 点就准时提醒发送到钉钉群，ps:我不是 996，我们是大小周
+
+```java
+/**
+* @func reportCurrentTimeTask 任务调度 每天上午11点⏰
+*/
+@Scheduled(cron = "0 0 11 * * ?")
+public void reportCurrentTimeTask() {
+    Calendar calendar = Calendar.getInstance();
+    int week = calendar.get(Calendar.DAY_OF_WEEK);
+
+    try {
+        if (week != 1) { /** 判断是星期天就不提醒了😯 **/
+            sendText();
+            sendMarkdown();
+        }
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}
+```
+
 最后：这块优化是后面写的，是因为之前一直发现出现同名菜，然后同事说这不智能，然后我才抽空闲时间做了这块优化，就目前来看，是没有问题的！自己很少写文章，对项目的解析和总结也就这样子，如果有什么问题欢迎 [![](https://img.shields.io/github/issues/weilkss/OrderingFoods)](https://github.com/weilkss/OrderingFoods/issues) 如果你觉得对你有帮助欢迎 [![](https://img.shields.io/github/stars/weilkss/OrderingFoods?style=social)](https://github.com/weilkss/OrderingFoods)
